@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".appointment.fragment.EditAppointmentFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:id="@+id/mScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/mEditCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/mSpinnerDoctor"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:visibility="invisible" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtSelectedDoctor"
+
+                        style="@style/txtMonReg"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:backgroundTint="@color/text_hint_color"
+                        android:hint="@string/select_doctor"
+                        android:inputType="textPersonName"
+                        android:minHeight="@dimen/_48sdp"
+                        android:textColor="@color/text_font_color"
+                        android:textColorHint="@color/colorGray" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/mSpinnerType"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:visibility="invisible" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtType"
+
+                        style="@style/txtMonReg"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:backgroundTint="@color/text_hint_color"
+                        android:hint="@string/select_department"
+                        android:minHeight="@dimen/_48sdp"
+                        android:textColor="@color/text_font_color"
+                        android:textColorHint="@color/colorGray" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtDate"
+
+                        style="@style/txtMonReg"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:backgroundTint="@color/text_hint_color"
+                        android:drawableEnd="@drawable/date"
+                        android:focusable="false"
+                        android:gravity="start|center"
+                        android:hint="@string/select_date"
+                        android:inputType="text"
+                        android:textColor="@color/text_font_color"
+                        android:textColorHint="@color/colorGray"
+
+                        />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtQualification"
+
+                        style="@style/txtMonReg"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:backgroundTint="@color/text_hint_color"
+                        android:hint="@string/start_time"
+                        android:inputType="text"
+                        android:minHeight="@dimen/_48sdp"
+                        android:textColor="@color/text_font_color"
+                        android:textColorHint="@color/colorGray" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtSpecialization"
+
+                        style="@style/txtMonReg"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:backgroundTint="@color/text_hint_color"
+                        android:hint="@string/end_time"
+                        android:inputType="text"
+                        android:minHeight="@dimen/_48sdp"
+                        android:textColor="@color/text_font_color"
+                        android:textColorHint="@color/colorGray" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_4sdp"
+                    android:background="@color/colorGray2" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtPurpose"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:background="@drawable/edit_bg"
+                    android:hint="@string/purpose_of_visit"
+                    android:inputType="text"
+                    android:paddingBottom="@dimen/_80sdp"
+                    android:textColorHint="@color/text_hint_color" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/doneBTN"
+
+        style="@style/button"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:text="@string/done" />
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/purple_700"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/mActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/text_font_color"
+        android:minHeight="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:minHeight="?actionBarSize"
+            android:scaleType="center"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/txtMonBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/imgBack"
+            android:gravity="center|start"
+            android:includeFontPadding="false"
+            android:minHeight="?actionBarSize"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18" />
+
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

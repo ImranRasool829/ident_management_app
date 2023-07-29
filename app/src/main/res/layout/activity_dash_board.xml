@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".dashboard.DashBoardActivity">
+    <!--    tools:openDrawer="start">-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/mRelativeContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llToolBar"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@color/text_light_blue_color"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/_4sdp"
+                        android:paddingTop="@dimen/_4sdp"
+                        android:weightSum="3">
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtStartDate"
+                            style="@style/txtMonBold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="2"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:gravity="center|end"
+                            android:hint="Select Date To Filter"
+                            android:minHeight="@dimen/_40sdp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/sp_14"
+
+                            />
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtEndDate"
+                            style="@style/txtMonBold"
+                            android:layout_width="0dp"
+                            android:layout_height="26dp"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:drawableEnd="@drawable/ic_dropdown"
+                            android:focusable="false"
+                            android:gravity="center|start"
+                            android:hint="Patient"
+                            android:minHeight="@dimen/_40sdp"
+                            android:paddingEnd="@dimen/_20sdp"
+                            android:paddingStart="@dimen/_4sdp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"
+                            android:textSize="@dimen/sp_14" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/mHCardView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@color/white"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="5"
+                            tools:listitem="@layout/item_patient_cat_layout" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mVCardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="3"
+                        tools:itemCount="7"
+                        tools:listitem="@layout/item_main_cat_layout">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mLinearFB"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <LinearLayout
+                android:id="@+id/llAppointment"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/line_color"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp"
+                    app:cardUseCompatPadding="true">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/add_appointment"
+                        android:textColor="@color/text_font_color"
+                        android:textSize="@dimen/sp_12" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/purple_200"
+                    android:contentDescription="@string/app_name"
+                    android:outlineSpotShadowColor="@color/white"
+                    android:padding="@dimen/_3sdp"
+
+                    android:src="@drawable/editappoinment"
+                    app:backgroundTint="@color/background_color"
+                    app:fabSize="mini"
+                    app:maxImageSize="@dimen/_12sdp"
+                    app:tint="@color/text_font_color" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAddPatient"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/line_color"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp"
+                    app:cardUseCompatPadding="true">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/add_patient"
+                        android:textColor="@color/text_font_color"
+                        android:textSize="@dimen/sp_12" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/purple_200"
+                    android:contentDescription="@string/app_name"
+                    android:outlineSpotShadowColor="@color/white"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/add_patient"
+                    app:backgroundTint="@color/background_color"
+                    app:fabSize="mini"
+                    app:maxImageSize="@dimen/_12sdp"
+                    app:tint="@color/text_font_color" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llBilling"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/line_color"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp"
+                    app:cardUseCompatPadding="true">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/add_billing"
+                        android:textColor="@color/text_font_color"
+                        android:textSize="@dimen/sp_12" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/purple_200"
+                    android:contentDescription="@string/app_name"
+                    android:outlineSpotShadowColor="@color/white"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/add_billing_ptn"
+                    app:backgroundTint="@color/background_color"
+                    app:fabSize="mini"
+                    app:maxImageSize="@dimen/_12sdp"
+                    app:tint="@color/text_font_color" />
+
+            </LinearLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/mFloatBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/plus"
+                app:backgroundTint="@color/text_font_color"
+                app:tint="@color/white" />
+
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/llToolBar"
+            layout="@layout/toolbar_main" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start|top"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/navLayout"
+            layout="@layout/nav_drawer" />
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

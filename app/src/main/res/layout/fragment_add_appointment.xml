@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color"
+    tools:context=".appointment.fragment.AddAppointmentFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/mScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/mCreatePg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mCardViewSd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@color/white"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp">
+
+                    <Spinner
+                        android:id="@+id/mSpinnerDoctor"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:visibility="invisible"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtDoctor"
+
+                        style="@style/editTextView"
+                        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:hint="@string/select_doctor"
+                        android:textColorHint="@color/colorGray" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mCardViewType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@color/white"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp">
+
+                    <Spinner
+                        android:id="@+id/mSpinnerType"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:visibility="invisible"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtType"
+
+                        style="@style/editTextView"
+                        android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:hint="@string/select_department"
+                        android:textColorHint="@color/colorGray" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mCardViewPN"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@color/white"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp">
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edtPN"
+
+                            style="@style/textView"
+                            android:hint="@string/patient_name"
+                            android:inputType="text"
+                            android:textColorHint="@color/text_hint_color"
+                            />
+
+
+                    </FrameLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mCardViewMobileNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@color/white"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp">
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/edtPTNNumber"
+
+                            style="@style/textView"
+                            android:hint="@string/phone_number"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:textColorHint="@color/text_hint_color"
+                            />
+
+                    </FrameLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mCardViewSD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@color/white"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtSelectDate"
+                            style="@style/textView"
+                            android:drawableEnd="@drawable/date"
+                            android:gravity="start|center"
+                            android:focusable="false"
+                            android:hint="@string/select_date" />
+
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mCardViewST"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@color/white"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtStartTime"
+                            style="@style/textView"
+                            android:drawableEnd="@drawable/time"
+                            android:focusable="false"
+                            android:gravity="start|center"
+                            android:hint="@string/start_time" />
+
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mCardViewET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@color/white"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtEndTime"
+                            style="@style/textView"
+                            android:drawableEnd="@drawable/time"
+                            android:gravity="start|center"
+                            android:focusable="false"
+                            android:hint="@string/end_time" />
+
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mCardViewPV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@color/white"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtPurpose"
+
+                            style="@style/editTextView"
+                            android:layout_height="@dimen/_124sdp"
+                            android:hint="@string/purpose_of_visit"
+                            android:inputType="text"
+                            android:maxLength="100"
+                            android:paddingBottom="@dimen/_80sdp" />
+
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    android:weightSum="2">-->
+
+                <!--                    <androidx.appcompat.widget.AppCompatTextView-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_marginStart="@dimen/_12sdp"-->
+                <!--                        android:layout_weight=".49"-->
+                <!--                        android:fontFamily="@font/poppins_bold"-->
+                <!--                        android:text="@string/send_sms"-->
+                <!--                        android:textColor="@color/text_font_color"-->
+                <!--                        android:textSize="@dimen/_11sdp"-->
+                <!--                        android:textStyle="normal" />-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_weight=".53"-->
+                <!--                        android:focusable="true"-->
+                <!--                        android:fontFamily="@font/poppins_regular"-->
+                <!--                        android:text="@string/sms"-->
+                <!--                        android:textColor="@color/text_font_color"-->
+                <!--                        android:textSize="@dimen/_11sdp"-->
+                <!--                        android:textStyle="normal" />-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_weight=".53"-->
+                <!--                        android:focusable="true"-->
+                <!--                        android:fontFamily="@font/poppins_regular"-->
+                <!--                        android:text="@string/mail"-->
+                <!--                        android:textColor="@color/text_font_color"-->
+                <!--                        android:textSize="@dimen/_11sdp"-->
+                <!--                        android:textStyle="normal" />-->
+
+                <!--                    <CheckBox-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_weight=".45"-->
+                <!--                        android:focusable="true"-->
+                <!--                        android:fontFamily="@font/poppins_regular"-->
+                <!--                        android:text="@string/whatsapp"-->
+                <!--                        android:textColor="@color/text_font_color"-->
+                <!--                        android:textSize="@dimen/_11sdp"-->
+                <!--                        android:textStyle="normal" />-->
+                <!--                </LinearLayout>-->
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/doneBTN"
+
+                    style="@style/button"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_24sdp"
+                    android:text="@string/done" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

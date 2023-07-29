@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgnav"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_margin="@dimen/_12sdp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_usericon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNameNav"
+
+                style="@style/txtMonBold"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="@string/dr_edom_crystonal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEmailNav"
+                style="@style/txtMonMed"
+                android:layout_marginBottom="@dimen/_22sdp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="@string/belindavakar_gmail_com"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9sdp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <include layout="@layout/line_horizontal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/navAppointment"
+                style="@style/txtMonMed"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:gravity="center"
+                android:text="@string/app_name" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/navChangePasswordTV"
+                style="@style/txtMonReg"
+                android:gravity="center_vertical"
+                android:text="@string/change_password" />
+
+            <include layout="@layout/line_horizontal" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/navshare"
+                style="@style/txtMonReg"
+                android:gravity="center_vertical"
+                android:text="@string/share" />
+
+            <include layout="@layout/line_horizontal" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/navaboutas"
+                style="@style/txtMonReg"
+                android:gravity="center_vertical"
+                android:text="@string/about_us" />
+
+            <include layout="@layout/line_horizontal" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/whatsnews"
+                style="@style/txtMonReg"
+                android:gravity="center_vertical"
+                android:text="@string/what_s_news" />
+
+            <include layout="@layout/line_horizontal" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/privacypolicy"
+                style="@style/txtMonReg"
+                android:gravity="center_vertical"
+                android:text="@string/privacy_policy" />
+
+            <include layout="@layout/line_horizontal" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/sendfeedback"
+                style="@style/txtMonReg"
+                android:gravity="center_vertical"
+                android:text="@string/send_feedback" />
+
+            <include layout="@layout/line_horizontal" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/navLogout"
+                style="@style/txtMonReg"
+                android:drawableStart="@drawable/ic_logout"
+                android:drawablePadding="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:text="@string/log_out" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

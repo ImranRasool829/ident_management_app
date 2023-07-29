@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itemPAEditAppointment"
+        android:title="@string/edit_appointment" />
+
+    <item
+        android:id="@+id/itemDeletePA"
+        android:title="@string/cancel" />
+
+    <item
+        android:id="@+id/itemNoShow"
+        android:title="@string/no_show" />
+
+    <item
+        android:id="@+id/itemCallPA"
+        android:title="@string/call"
+        />
+
+</menu>

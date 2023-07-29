@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/_48sdp"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tvServiceName"
+
+                style="@style/txtMonReg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="center|start"
+                android:textSize="@dimen/sp_12"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="@string/capsule_amoxicillin" />
+
+            <TextView
+                android:id="@+id/tvTeethNum"
+
+                style="@style/txtMonReg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:textSize="@dimen/sp_12"
+                android:gravity="center"
+                android:text="10387" />
+
+            <TextView
+                android:id="@+id/tvAmount"
+
+                style="@style/txtMonReg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5"
+                android:textSize="@dimen/sp_12"
+                android:gravity="center"
+                android:text="400" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

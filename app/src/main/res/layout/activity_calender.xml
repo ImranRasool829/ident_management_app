@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/background_color"
+    android:orientation="vertical"
+    tools:context=".dashboard.CalenderActivity">
+
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/app_toolbar" />
+
+
+    <RelativeLayout
+        android:id="@+id/llTopDL"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtSelectDoctor"
+
+            style="@style/editTextView"
+            android:textColorHint="@color/colorGray"
+            android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:focusable="false"
+            android:hint="@string/select_doctor"
+            />
+
+        <Spinner
+            android:id="@+id/mvSpinnerDoctor"
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="start"
+            android:textSize="@dimen/_14sdp"
+            android:visibility="invisible"
+            />
+
+        <CalendarView
+            android:id="@+id/calendarView"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mvSpinnerDoctor"
+            />
+
+
+        <include
+            android:id="@+id/hLine1"
+            layout="@layout/line_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_below="@+id/calendarView"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/calepatientRvv"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hLine1"
+            android:layout_gravity="center"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="6"
+            tools:listitem="@layout/item_appointment_list_layout" />
+
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

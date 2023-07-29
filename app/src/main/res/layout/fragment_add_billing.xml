@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".billing.AddBillingFragment">
+
+
+    <ScrollView
+        android:id="@+id/mScrollView"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:scrollbars="vertical"
+        android:layout_above="@+id/createInvoiceBTN">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/txtMonMed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/patient" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mCardViewSd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="0dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Spinner
+                    android:id="@+id/mSpinnerPatient"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_35sdp"
+                    android:visibility="invisible"
+                    />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtPatient"
+
+                    style="@style/editTextView"
+                    android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:focusable="false"
+                    android:hint="@string/select_patient"
+                    android:textColorHint="@color/colorGray" />
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <include layout="@layout/line_horizontal" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mCardViewSD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="0dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtSelectDate"
+                    style="@style/textView"
+                    android:drawableEnd="@drawable/date"
+                    android:gravity="start|center"
+                    android:focusable="false"
+                    android:text="@string/select_date" />
+
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+                <Button
+                    android:id="@+id/addItemBTN"
+
+                    style="@style/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_item"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:layout_gravity="end"
+                    android:drawableEnd="@drawable/add_on"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:weightSum="10">
+
+                <TextView
+                    style="@style/txtMonSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_16"
+                    android:gravity="center|start"
+                    android:text="@string/service" />
+
+                <TextView
+                    style="@style/txtMonSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/black"
+                    android:text="@string/teeth_no" />
+
+                <TextView
+                    style="@style/txtMonSemiBold"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/black"
+                    android:text="@string/amount" />
+
+            </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="2"
+            app:spanCount="1"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_billing_service_layout"
+            />
+
+    </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/createInvoiceBTN"
+
+        style="@style/button"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_42sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/edit_button_background_color"
+        android:focusable="true"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:minHeight="@dimen/_35sdp"
+        android:text="@string/submit"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
